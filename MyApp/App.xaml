@@ -10,6 +10,7 @@
                 <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
             <!-- Other app resources here -->
+            <ResourceDictionary Source="ms-appx:///SettingsUI/Themes/SettingsUI.xaml"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
