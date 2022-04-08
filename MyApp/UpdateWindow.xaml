@@ -1,0 +1,24 @@
+﻿<Window
+    x:Class="WinUITest2.UpdateWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WinUITest2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <TextBlock Text="MyApp Update" FontWeight="SemiBold" FontSize="24"/>
+        <StackPanel Spacing="10">
+            <InfoBar IsOpen="True" IsClosable="False" Severity="Warning" Title="First you must create a new release tag in GitHub repository, tag version must be in this format : 1.0.0.0 now we can check for update with github username and github repository"/>
+            <Button Click="Button_Click" Content="Check for Update" HorizontalAlignment="Center"/>
+            <TextBlock Name="txtReleaseUrl"/>
+            <TextBlock Name="txtCreatedAt"/>
+            <TextBlock Name="txtPublishedAt"/>
+            <TextBlock Name="txtIsPreRelease"/>
+            <TextBlock Name="txtTagName"/>
+            <TextBlock Name="txtChangelog"/>
+            <ListView Name="listView"/>
+        </StackPanel>
+    </Grid>
+</Window>

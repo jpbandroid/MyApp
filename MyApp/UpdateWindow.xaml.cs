@@ -7,6 +7,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using SettingsUI.Helpers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,13 +25,13 @@ namespace WinUITest2
     /// <summary>
     /// An empty window that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainWindow : Window
+    public sealed partial class UpdateWindow : Window
     {
-        public MainWindow()
+        public UpdateWindow()
         {
             this.InitializeComponent();
             var m_AppWindow = GetAppWindowForCurrentWindow();
-            m_AppWindow.Title = "MyApp";
+            m_AppWindow.Title = "MyApp Update";
         }
 
         public AppWindow GetAppWindowForCurrentWindow()
@@ -40,24 +41,22 @@ namespace WinUITest2
             return AppWindow.GetFromWindowId(wndId);
         }
 
-        private async void myButton_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            myButton.Content = "Clicked";
-            var description = new System.Text.StringBuilder();
-            var process = System.Diagnostics.Process.GetCurrentProcess();
-            foreach (System.Diagnostics.ProcessModule module in process.Modules)
+            var ver = await UpdateHelper.CheckUpdateAsync("jpbandroid", "MyApp");
+            if (ver.IsExistNewVersion)
             {
-                description.AppendLine(module.FileName);
+                txtReleaseUrl.Text = $"Release Url: {ver.HtmlUrl}";
+                txtCreatedAt.Text = $"Created At: {ver.CreatedAt}";
+                txtPublishedAt.Text = $"Published At {ver.PublishedAt}";
+                txtIsPreRelease.Text = $"Is PreRelease: {ver.IsPreRelease}";
+                txtTagName.Text = $"Tag Name: {ver.TagName}";
+                txtChangelog.Text = $"Changelog: {ver.Changelog}";
+                foreach (var item in ver.Assets)
+                {
+                    listView.Items.Add($"{item.Url}{Environment.NewLine}Size: {item.Size}");
+                }
             }
-
-            cdTextBlock.Text = description.ToString();
-            await contentDialog.ShowAsync();
-        }
-
-        private void update(object sender, RoutedEventArgs e)
-        {
-            UpdateWindow window = new UpdateWindow();
-            window.Activate();
         }
     }
 }
