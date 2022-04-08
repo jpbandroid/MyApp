@@ -28,9 +28,18 @@ namespace WinUITest2
             this.InitializeComponent();
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        private async void myButton_Click(object sender, RoutedEventArgs e)
         {
             myButton.Content = "Clicked";
+            var description = new System.Text.StringBuilder();
+            var process = System.Diagnostics.Process.GetCurrentProcess();
+            foreach (System.Diagnostics.ProcessModule module in process.Modules)
+            {
+                description.AppendLine(module.FileName);
+            }
+
+            cdTextBlock.Text = description.ToString();
+            await contentDialog.ShowAsync();
         }
     }
 }
