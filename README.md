@@ -1,7 +1,7 @@
 # MyApp
 A fidgeting app based on WinUI3!
 ## Install
-To install a release, download the Installer .exe file (coming soon), or the .msix file and the certificate (.cer) file along with it.
+To install a release, go to the Releases tab, then download the Installer .exe file (coming soon), or the .msix file and the certificate (.cer) file along with it.
 ### Install the certificate (required for MSIX ONLY!)
 1. Download and double-click certificate file (file extension .cer)
 2. Click _Install Cerificate_
