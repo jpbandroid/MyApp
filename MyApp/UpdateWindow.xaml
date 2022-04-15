@@ -10,8 +10,8 @@
     <Grid>
         <StackPanel Spacing="10" Margin="10">
             <TextBlock Text="MyApp Update" FontWeight="SemiBold" FontSize="24"/>
-            <InfoBar IsOpen="True" IsClosable="False" Severity="Warning" Title="First you must create a new release tag in GitHub repository, tag version must be in this format : 1.0.0.0 now we can check for update with github username and github repository"/>
-            <Button Click="Button_Click" Content="Check for Updates" HorizontalAlignment="Center"/>
+            <InfoBar IsOpen="True" IsClosable="False" Severity="Warning" Title="When you click the Check for Updates button before a stable release of MyApp with a higher version number releases, the app will crash"/>
+            <Button Click="Button_Click" Content="Check for Updates" HorizontalAlignment="Center" Style="{StaticResource AccentButtonStyle}"/>
             <TextBlock Name="txtReleaseUrl"/>
             <TextBlock Name="txtCreatedAt"/>
             <TextBlock Name="txtPublishedAt"/>

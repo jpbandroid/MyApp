@@ -77,5 +77,11 @@ namespace WinUITest2
             ButtonWindow window = new ButtonWindow();
             window.Activate();
         }
+
+        private void about(object sender, RoutedEventArgs e)
+        {
+            AboutWindow window = new AboutWindow();
+            window.Activate();
+        }
     }
 }

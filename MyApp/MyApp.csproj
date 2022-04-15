@@ -21,6 +21,7 @@
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="AboutWindow.xaml" />
     <None Remove="ButtonWindow.xaml" />
     <None Remove="CheckboxWindow.xaml" />
     <None Remove="RadioButtonWindow.xaml" />
@@ -51,6 +52,11 @@
        package has not yet been restored -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnablePreviewMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AboutWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="ButtonWindow.xaml">

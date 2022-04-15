@@ -8,10 +8,13 @@
     mc:Ignorable="d">
 
     <Grid>
-        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Content="Updater" Click="update"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Spacing="10">
+            <Button Content="Updater" Click="update"/>
+            <Button Content="About" Click="about"/>
+        </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button x:Name="myButton" Click="myButton_Click">Click!</Button>
-            <TextBlock Text="WinUI3 Components" FontWeight="SemiBold" FontSize="24" TextAlignment="Center"/>
+            <TextBlock Text="WinUI3 Components" FontWeight="SemiBold" FontSize="24" TextAlignment="Center" HorizontalAlignment="Center"/>
             <Button x:Name="radiobuttonmain" Click="radiobuttonclick">Radiobuttons</Button>
             <Button x:Name="checkboxbutton" Click="CheckBoxclick">Checkboxes</Button>
             <Button x:Name="buttonmain" Click="buttonclick">Buttons</Button>
