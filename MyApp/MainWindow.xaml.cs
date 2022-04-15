@@ -71,5 +71,11 @@ namespace WinUITest2
             RadioButtonWindow window = new RadioButtonWindow();
             window.Activate();
         }
+
+        private void buttonclick(object sender, RoutedEventArgs e)
+        {
+            ButtonWindow window = new ButtonWindow();
+            window.Activate();
+        }
     }
 }

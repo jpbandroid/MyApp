@@ -11,9 +11,10 @@
         <Button HorizontalAlignment="Right" VerticalAlignment="Top" Content="Updater" Click="update"/>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button x:Name="myButton" Click="myButton_Click">Click!</Button>
-            <TextBlock Text="WinUI3 Components" FontWeight="SemiBold" FontSize="24"/>
+            <TextBlock Text="WinUI3 Components" FontWeight="SemiBold" FontSize="24" TextAlignment="Center"/>
             <Button x:Name="radiobuttonmain" Click="radiobuttonclick">Radiobuttons</Button>
             <Button x:Name="checkboxbutton" Click="CheckBoxclick">Checkboxes</Button>
+            <Button x:Name="buttonmain" Click="buttonclick">Buttons</Button>
             <ContentDialog x:Name="contentDialog" CloseButtonText="Close" Title="Loaded Modules">
                 <ScrollViewer>
                     <TextBlock x:Name="cdTextBlock" TextWrapping="Wrap" />
