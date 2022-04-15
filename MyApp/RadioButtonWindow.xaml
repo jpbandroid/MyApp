@@ -9,7 +9,7 @@
 
     <Grid>
         <TextBlock Text="Radiobuttons" FontWeight="SemiBold" FontSize="24" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Options:" Style="{ThemeResource BaseTextBlockStyle}"/>
             <RadioButton x:Name="Option1RadioButton" Content="Option 1"/>
             <RadioButton x:Name="Option2RadioButton" Content="Option 2"/>
