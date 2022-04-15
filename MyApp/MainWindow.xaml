@@ -9,8 +9,10 @@
 
     <Grid>
         <Button HorizontalAlignment="Right" VerticalAlignment="Top" Content="Updater" Click="update"/>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button x:Name="myButton" Click="myButton_Click">Click!</Button>
+            <TextBlock Text="WinUI3 Components" FontWeight="SemiBold" FontSize="24"/>
+            <Button x:Name="checkboxbutton" Click="CheckBoxclick">Checkboxes</Button>
             <ContentDialog x:Name="contentDialog" CloseButtonText="Close" Title="Loaded Modules">
                 <ScrollViewer>
                     <TextBlock x:Name="cdTextBlock" TextWrapping="Wrap" />

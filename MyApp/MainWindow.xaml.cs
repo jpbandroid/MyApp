@@ -59,5 +59,11 @@ namespace WinUITest2
             UpdateWindow window = new UpdateWindow();
             window.Activate();
         }
+
+        private void CheckBoxclick(object sender, RoutedEventArgs e)
+        {
+            CheckboxWindow window = new CheckboxWindow();
+            window.Activate();
+        }
     }
 }
