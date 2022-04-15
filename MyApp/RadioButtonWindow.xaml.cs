@@ -24,9 +24,9 @@ namespace WinUITest2
     /// <summary>
     /// An empty window that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainWindow : Window
+    public sealed partial class RadioButtonWindow : Window
     {
-        public MainWindow()
+        public RadioButtonWindow()
         {
             this.InitializeComponent();
             var m_AppWindow = GetAppWindowForCurrentWindow();
@@ -38,38 +38,6 @@ namespace WinUITest2
             IntPtr hWnd = WindowNative.GetWindowHandle(this);
             WindowId wndId = Win32Interop.GetWindowIdFromWindow(hWnd);
             return AppWindow.GetFromWindowId(wndId);
-        }
-
-        private async void myButton_Click(object sender, RoutedEventArgs e)
-        {
-            myButton.Content = "Clicked";
-            var description = new System.Text.StringBuilder();
-            var process = System.Diagnostics.Process.GetCurrentProcess();
-            foreach (System.Diagnostics.ProcessModule module in process.Modules)
-            {
-                description.AppendLine(module.FileName);
-            }
-
-            cdTextBlock.Text = description.ToString();
-            await contentDialog.ShowAsync();
-        }
-
-        private void update(object sender, RoutedEventArgs e)
-        {
-            UpdateWindow window = new UpdateWindow();
-            window.Activate();
-        }
-
-        private void CheckBoxclick(object sender, RoutedEventArgs e)
-        {
-            CheckboxWindow window = new CheckboxWindow();
-            window.Activate();
-        }
-
-        private void radiobuttonclick(object sender, RoutedEventArgs e)
-        {
-            RadioButtonWindow window = new RadioButtonWindow();
-            window.Activate();
         }
     }
 }

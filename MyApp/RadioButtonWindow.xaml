@@ -1,0 +1,19 @@
+﻿<Window
+    x:Class="WinUITest2.RadioButtonWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WinUITest2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <TextBlock Text="Radiobuttons" FontWeight="SemiBold" FontSize="24" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <StackPanel>
+            <TextBlock Text="Options:" Style="{ThemeResource BaseTextBlockStyle}"/>
+            <RadioButton x:Name="Option1RadioButton" Content="Option 1"/>
+            <RadioButton x:Name="Option2RadioButton" Content="Option 2"/>
+            <RadioButton x:Name="Option3RadioButton" Content="Option 3"/>
+        </StackPanel>
+    </Grid>
+</Window>
