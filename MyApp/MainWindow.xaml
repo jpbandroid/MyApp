@@ -11,6 +11,13 @@
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Spacing="10">
             <Button Content="Updater" Click="update"/>
             <Button Content="About" Click="about"/>
+            <Button Click="settings">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal" Spacing="10">
+                        <TextBlock Text="Settings"/>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button x:Name="myButton" Click="myButton_Click">Click!</Button>

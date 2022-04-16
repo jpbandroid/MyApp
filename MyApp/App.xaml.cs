@@ -6,6 +6,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI.Xaml.Shapes;
+using SettingsUI.Helpers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -43,6 +44,7 @@ namespace WinUITest2
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
             m_window = new MainWindow();
+            ThemeHelper.Initialize(m_window);
             m_window.Activate();
         }
 

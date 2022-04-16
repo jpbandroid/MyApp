@@ -98,5 +98,11 @@ namespace WinUITest2
             TabWindow window = new TabWindow();
             window.Activate();
         }
+
+        private void settings(object sender, RoutedEventArgs e)
+        { 
+            SettingsWindow window = new SettingsWindow();
+            window.Activate();
+        }
     }
 }
