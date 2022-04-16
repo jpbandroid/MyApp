@@ -14,6 +14,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Foundation.Metadata;
 using WinRT.Interop;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -31,6 +32,14 @@ namespace WinUITest2
             this.InitializeComponent();
             var m_AppWindow = GetAppWindowForCurrentWindow();
             m_AppWindow.Title = "MyApp";
+            if (!ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
+            {
+                tabbutton.Visibility = Visibility.Collapsed;
+            } else
+            {
+                tabbutton.Visibility = Visibility.Visible;
+            }
+
         }
 
         public AppWindow GetAppWindowForCurrentWindow()

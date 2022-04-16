@@ -10,10 +10,10 @@
     <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Padding="10" Spacing="10">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Padding="10" Spacing="10" Orientation="Horizontal">
             <Image Source="/Assets/StoreLogo.png" Height="128" Width="128"/>
-            <TextBlock Text="MyApp" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"/>
+            <TextBlock Text="MyApp" FontSize="24" FontWeight="SemiBold" TextAlignment="Center" Height="128"/>
         </StackPanel>
         <TextBlock Text="version 1.0" HorizontalAlignment="Center"/>
-        <TextBlock Text="Built on 16/4/2022" HorizontalAlignment="Center" Height="128"/>
+        <TextBlock Text="Built on 16/4/2022" HorizontalAlignment="Center"/>
         <HyperlinkButton Content="GitHub repo" NavigateUri="https://github.com/jpbandroid/MyApp" HorizontalAlignment="Center"/>
         <TextBlock Text="License" FontSize="24" FontWeight="SemiBold"/>
         <TextBlock 
