@@ -18,6 +18,7 @@
             <Button x:Name="radiobuttonmain" Click="radiobuttonclick">Radiobuttons</Button>
             <Button x:Name="checkboxbutton" Click="CheckBoxclick">Checkboxes</Button>
             <Button x:Name="buttonmain" Click="buttonclick">Buttons</Button>
+            <Button x:Name="tabbutton" Click="tabbuttonclick">TabView</Button>
             <ContentDialog x:Name="contentDialog" CloseButtonText="Close" Title="Loaded Modules">
                 <ScrollViewer>
                     <TextBlock x:Name="cdTextBlock" TextWrapping="Wrap" />

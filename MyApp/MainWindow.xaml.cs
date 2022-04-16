@@ -83,5 +83,11 @@ namespace WinUITest2
             AboutWindow window = new AboutWindow();
             window.Activate();
         }
+
+        private void tabbuttonclick(object sender, RoutedEventArgs e)
+        {
+            TabWindow window = new TabWindow();
+            window.Activate();
+        }
     }
 }
