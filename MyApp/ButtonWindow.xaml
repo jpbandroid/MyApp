@@ -18,6 +18,10 @@
                     <TextBlock Text="MyApp"/>
                 </StackPanel>
             </Button>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <RepeatButton Content="Click and hold" Click="RepeatButton_Click" />
+                <TextBlock x:Name="ClickText" />
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

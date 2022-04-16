@@ -39,5 +39,12 @@ namespace WinUITest2
             WindowId wndId = Win32Interop.GetWindowIdFromWindow(hWnd);
             return AppWindow.GetFromWindowId(wndId);
         }
+
+        private static int _clicks = 0;
+        private void RepeatButton_Click(object sender, RoutedEventArgs e)
+        {
+            _clicks += 1;
+            ClickText.Text = "Number of clicks: " + _clicks;
+        }
     }
 }
