@@ -12,8 +12,8 @@
             <Image Source="/Assets/StoreLogo.png" Height="128" Width="128"/>
             <TextBlock Text="MyApp" FontSize="24" FontWeight="SemiBold" TextAlignment="Center"/>
         </StackPanel>
-        <TextBlock Text="version 0.5" HorizontalAlignment="Center"/>
-        <TextBlock Text="Built on 15/4/2022" HorizontalAlignment="Center"/>
+        <TextBlock Text="version 0.8" HorizontalAlignment="Center"/>
+        <TextBlock Text="Built on 16/4/2022" HorizontalAlignment="Center"/>
         <HyperlinkButton Content="GitHub repo" NavigateUri="https://github.com/jpbandroid/MyApp" HorizontalAlignment="Center"/>
         <TextBlock Text="License" FontSize="24" FontWeight="SemiBold"/>
         <TextBlock 
