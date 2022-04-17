@@ -22,6 +22,7 @@
                 <RepeatButton Content="Click and hold" Click="RepeatButton_Click" />
                 <TextBlock x:Name="ClickText" />
             </StackPanel>
+            <AppBarButton Icon="Like" Label="SymbolIcon"/>
         </StackPanel>
     </Grid>
 </Window>
