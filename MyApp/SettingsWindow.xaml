@@ -9,8 +9,10 @@
 
     <Grid>
         <StackPanel>
-            <TextBlock Text="Settings" FontWeight="SemiBold" FontSize="24" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Button Content="Tutorial" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top" Click="tutorial"/>
+            <Grid>
+                <TextBlock Text="Settings" FontWeight="SemiBold" FontSize="24" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Content="Tutorial" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top" Click="tutorial"/>
+            </Grid>
             <Expander x:Name="Expander">
                 <Expander.Header>
                     <StackPanel Spacing="10" Orientation="Horizontal">
