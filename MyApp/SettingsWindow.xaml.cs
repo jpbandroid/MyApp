@@ -86,5 +86,16 @@ namespace WinUITest2
                 }
             }
         }
+
+        private void tutorial(object sender, RoutedEventArgs e)
+        {
+            ToggleThemeTeachingTip1.IsOpen = true;
+        }
+
+        private void ToggleThemeTeachingTip1_ActionButtonClick(TeachingTip sender, object args)
+        {
+            ToggleThemeTeachingTip1.IsOpen = false;
+            ToggleThemeTeachingTip2.IsOpen = true;
+        }
     }
 }

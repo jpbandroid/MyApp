@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="Assets\icon.ico" />
+    <Content Remove="Assets\paintbrush.svg" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="AboutWindow.xaml" />

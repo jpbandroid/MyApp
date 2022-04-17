@@ -10,6 +10,7 @@
     <Grid>
         <StackPanel>
             <TextBlock Text="Settings" FontWeight="SemiBold" FontSize="24" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button Content="Tutorial" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Top" Click="tutorial"/>
             <Expander x:Name="Expander">
                 <Expander.Header>
                     <StackPanel Spacing="10" Orientation="Horizontal">
@@ -42,6 +43,24 @@
                     </StackPanel>
                 </Expander.Content>
             </Expander>
+            <TeachingTip x:Name="ToggleThemeTeachingTip1"
+	Target="{x:Bind Expander}"
+	Title="Change themes without hassle"
+	Subtitle="It's easier than ever to change the MyApp theme!"
+                         ActionButtonClick="ToggleThemeTeachingTip1_ActionButtonClick"
+	ActionButtonContent="Next">
+                <TeachingTip.IconSource>
+                    <SymbolIconSource Symbol="Refresh" />
+                </TeachingTip.IconSource>
+            </TeachingTip>
+            <TeachingTip x:Name="ToggleThemeTeachingTip2"
+	Target="{x:Bind Expander2}"
+	Title="Change accent color without hassle"
+	Subtitle="It's easier than ever to personalize MyApp with the option to pick custom accent colors!">
+                <TeachingTip.IconSource>
+                    <BitmapIconSource UriSource="/Assets/paintbrush.svg"/>
+                </TeachingTip.IconSource>
+            </TeachingTip>
         </StackPanel>
     </Grid>
 </Window>
