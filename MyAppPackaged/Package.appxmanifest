@@ -9,7 +9,7 @@
   <Identity
     Name="JPB.MyApp.WinUI3"
     Publisher="CN=jpb"
-    Version="1.0.1.0" />
+    Version="1.0.2.0" />
 
   <Properties>
     <DisplayName>MyApp</DisplayName>
